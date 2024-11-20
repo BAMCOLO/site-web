@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L'Association des Étudiants et des Jeunes de Mayotte (AEJM) intervient dans les domaines de la santé, de l'animation, de la vie étudiante et de l'accompagnement social à Mayotte.">
+    <meta name="keywords" content="AEJM, association, jeunes de Mayotte, Dembéni, Koungou, Bandrélé, prévention santé, animation, vie étudiante, accompagnement social">
+    <title>Association des Étudiants et des Jeunes de Mayotte (AEJM)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- Pour les icônes -->
+    <style>
+        /* RESET DE BASE */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header .logo img {
+            height: 60px;
+            margin-left: 20px;
+            border: 5px solid white; /* Bordure blanche autour du logo */
+            border-radius: 10px; /* Bordure arrondie */
+            padding: 5px; /* Espace entre l'image et la bordure */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre subtile autour de l'image */
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li a:hover {
+            color: #FF9800;
+            transform: scale(1.1); /* Effet d'agrandissement */
+        }
+
+        header nav ul li a i {
+            margin-right: 8px;
+        }
+
+        /* SECTION ACCUEIL */
+        #accueil {
+            height: 100vh;
+            background: url('Equipe-Aejm.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            opacity: 0;
+            animation: fadeInPage 2s forwards; /* Animation de la page d'accueil */
+        }
+
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Titre d'accueil */
+        #accueil h1 {
+            font-size: 3rem;
+            font-family: 'Poppins', sans-serif;
+            animation: slideInTitle 1.5s ease-out;
+            text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), 0px 0px 40px rgba(0, 0, 0, 0.6);
+            border: 6px solid #FF9800;
+            padding: 25px 50px;
+            border-radius: 20px;
+            margin: 0 auto;
+            max-width: 90%;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); /* Ajout du fond sombre seulement pour le titre */
+        }
+
+        @keyframes slideInTitle {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #accueil p {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            animation: fadeInText 2.5s ease-in-out;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #accueil .cta-button {
+            background-color: #FF9800;
+            color: white;
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #accueil .cta-button:hover {
+            background-color: #e68900;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* SECTION ACTIVITÉS */
+        #activites {
+            padding: 70px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        #activites h2 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .activity {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .activity p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        /* SECTION VIDÉOS */
+        #videos {
+            padding: 50px 20px;
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+        }
+
+        #videos h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 314px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .video-container iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #FF9800;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            #accueil h1 {
+                font-size: 2.5rem;
+            }
+
+            #activites .activity {
+                padding: 15px;
+                margin: 10px 0;
+            }
+
+            .video-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .video-container iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Logo.jpg" alt="Logo AEJM">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="#activites"><i class="fas fa-users"></i>Nos Actions</a></li>
+                <li><a href="#videos"><i class="fas fa-video"></i>Nos Vidéos</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i>Contact</a></li>
+                <li><a href="#adhesion"><i class="fas fa-hand-holding-heart"></i>Adhésion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil">
+        <h1>Bienvenue à l'Association pour les Étudiants et les Jeunes de Mayotte</h1>
+        <p>Engagés pour la jeunesse et la vie étudiante à Mayotte.</p>
+        <a href="#adhesion" class="cta-button">Rejoindre l'événements</a>
+    </section>
+
+    <!-- Section Activités -->
+    <section id="activites">
+        <h2>Nos Actions</h2>
+        <div class="activity">
+            <h3>Prévention Santé</h3>
+            <p>Nous organisons des campagnes de prévention santé à destination des jeunes de 15 à 25 ans, notamment sur les thématiques de l'hygiène, de la nutrition, et du bien-être psychologique.</p>
+        </div>
+        <div class="activity">
+            <h3>Vie Étudiante et Animation</h3>
+            <p>Nous mettons en place des activités de loisirs, des événements culturels et sportifs pour encourager la cohésion sociale et l'épanouissement des jeunes dans leur environnement.</p>
+        </div>
+        <div class="activity">
+            <h3>Accompagnement Social</h3>
+            <p>Nous offrons un accompagnement personnalisé pour aider les jeunes dans leur parcours éducatif, professionnel, et social, en particulier dans les quartiers prioritaires de l'île.</p>
+        </div>
+    </section>
+
+    <!-- Section Vidéos -->
+    <section id="videos">
+        <h2>Nos Vidéos</h2>
+        <div class="video-container">
+            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Faejmayotte%2Fvideos%2F756546486366506%2F&show_text=false&width=560&t=0" allowfullscreen="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Faejmayotte%2Fvideos%2F995222258221159%2F&show_text=false&width=560&t=0" allowfullscreen="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Faejmayotte%2Fvideos%2F553252696696734%2F&show_text=false&width=560&t=0" allowfullscreen="true"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Association AEJM - Tous droits réservés</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
